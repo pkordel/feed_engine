@@ -1,1 +1,10 @@
+// override bootstrap defaults here.
+// example:$btnPrimaryBackground: #f00;
+// see http://twitter.github.com/bootstrap/less.html#variables
+
 @import "bootstrap";
+@import "bootstrap-responsive";
+
+body {
+  margin-top: 60px;
+}
