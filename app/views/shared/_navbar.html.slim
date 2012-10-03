@@ -1,0 +1,26 @@
+div.navbar.navbar-inverse.navbar-fixed-top
+  div.navbar-inner
+    div.container
+      a.btn.btn-navbar data-target=".nav-collapse" data-toggle="collapse"
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.brand href="#" FeedEngine
+      div.nav-collapse.collapse
+        ul.nav
+          li.active
+            = link_to 'Home', root_path
+          li
+            a href="#about" About
+          li
+            a href="#contact" Contact
+      ul.nav.pull-right
+        - if current_user
+          li
+            = link_to 'Sign out', destroy_user_session_path
+        - else
+          li
+            = link_to 'Sign in', new_user_session_path
+          li
+            = link_to 'Sign up', new_user_registration_path
+      /! /.nav-collapse
